@@ -128,8 +128,8 @@ cc.Class({
   touchEnd(event) {
     this.endPoint = event.getLocation()
 
-    // let vec = cc.pSub(this.endPoint, this.startPoint);
     let vec = this.endPoint.sub(this.startPoint)
+
     if (vec.mag() > MIN_LENGTH) {
       if (Math.abs(vec.x) > Math.abs(vec.y)) {
         // 水平方向
@@ -212,7 +212,6 @@ cc.Class({
   },
 
   moveLeft() {
-    cc.log("move left")
     let hasMoved = false
     let move = (x, y, callback) => {
       if (y == 0 || this.data[x][y] == 0) {
@@ -275,7 +274,6 @@ cc.Class({
   },
 
   moveRight() {
-    cc.log("move right")
     let hasMoved = false
     let move = (x, y, callback) => {
       if (y == ROWS - 1 || this.data[x][y] == 0) {
@@ -338,8 +336,6 @@ cc.Class({
   },
 
   moveUp() {
-    cc.log("move up")
-
     let hasMoved = false
     let move = (x, y, callback) => {
       if (x == ROWS - 1 || this.data[x][y] == 0) {
@@ -402,8 +398,6 @@ cc.Class({
   },
 
   moveDown() {
-    cc.log("move down")
-
     let hasMoved = false
     let move = (x, y, callback) => {
       if (x == 0 || this.data[x][y] == 0) {

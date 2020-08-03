@@ -13,4 +13,5 @@ colors[512] = cc.color(234, 192, 71, 255)
 colors[1024] = cc.color(146, 208, 80, 255)
 colors[2048] = cc.color(0, 176, 240, 255)
 
-module.exports = colors
+// module.exports = colors
+export default colors
